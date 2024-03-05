@@ -166,6 +166,34 @@ See: [Python F-Strings](#python-f-strings-since-python-3-6)
 
 
 
+WXL add
+----------
+
+
+### Multi-Process {.col-span-2 .row-span-3}
+
+```python
+import multiprocessing
+
+manager = multiprocessing.Manager()
+# output = manager.list() # 可用于多线程的全局变量
+total_len = len(data_list)
+process_num = 20 # 使用多少个线程并行处理
+tmp_len = total_len // process_num + 1
+q = multiprocessing.Queue()
+jobs = []
+for i in range(process_num):
+    data_list_temp = data_list[tmp_len * i : min(tmp_len * (i + 1), total_len)]
+    p = multiprocessing.Process(target=function, args=(args0, ))
+    jobs.append(p)
+    p.start()
+    
+for p in jobs:
+    p.join()
+
+```
+
+
 Python Built-in Data Types
 ---------------
 
