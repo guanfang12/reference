@@ -45,6 +45,8 @@ class Solution:
         return -1
 ```
 
+- 插入的问题最后改为 `return right + 1`
+
 
 
 投递岗位
@@ -60,7 +62,7 @@ class Solution:
 
 ### 小米
 投递记录： [小米](https://xiaomi.jobs.f.mioffice.cn/internship/?spread=6AA3R7B)
-- TODO
+- TODO 【BEVDet，BEVFusion，Occupancy Network】
 
 考虑：
 - [自动驾驶感知算法实习生](https://xiaomi.jobs.f.mioffice.cn/internship/position/7224347784110997613/detail?spread=6AA3R7B)
