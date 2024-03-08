@@ -39,6 +39,38 @@ ls -lR| grep "^-" | wc -l
 ls -lR | grep "^d" | wc -l
 ```
 
+### Git
+
+```bash
+# Add a git URL as an alias
+git remote add [alias] [url] 
+```
+
+```sbash
+# Change the URL of the git repo
+git remote set-url origin [git_url] 
+```
+
+
+Deep Learning 
+---------------
+
+### 卷积神经网络
+
+- [计算机视觉面试题-网络结构相关问题总结](https://zhuanlan.zhihu.com/p/556521788)
+    - 使用3个 3x3conv 而不 7x7conv 是可以降低计算量
+- [卷积核的数量决定了输出特征的维度（通道数）](https://blog.csdn.net/weixin_42863507/article/details/106320968)
+- 输入特征的维度决定了每个卷积核的通道数
+    - 即每个卷积核是有通道数的概念的
+
+### ResNet
+
+- 深度网络能够合并不同层次的特征信息
+- 阻碍收敛的梯度消失/爆炸
+    - normalized initialization and intermediate normalization layer 可以解决问题
+- ResNet解决的是Deep Net 深度增加时的退化问题
+- Bottleneck 在增加深度的同时不会额外增加参数量
+
 
 
 Python

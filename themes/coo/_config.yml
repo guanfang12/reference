@@ -18,10 +18,10 @@ index_recommends:
   - bash
   - python
   - javascript
-  - go
+  - daily-record
   - vim
   - leetcode
-  - awk
+  - git
 
 
 # Related popular posts

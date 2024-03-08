@@ -234,6 +234,11 @@ Show the names and URLs of the remote repositories
 $ git remote -v
 ```
 
+[Rename a remote repository](https://blog.csdn.net/xiliunian/article/details/103575748)
+``` shell script
+$ git remote rename <shortname> <newname>
+```
+
 Remove a remote repository
 ``` shell script
 $ git remote rm [remote repo name]

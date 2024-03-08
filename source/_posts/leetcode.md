@@ -22,6 +22,12 @@ plugins:
 - 大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度
 
 
+排序
+----
+
+
+
+
 数组
 ----
 
@@ -46,6 +52,38 @@ class Solution:
 ```
 
 - 插入的问题最后改为 `return right + 1`
+- 平方根问题：$k^2 < x$，找到 k
+
+
+### 移除元素
+双向指针方法
+
+- 首尾指针，会改变元素相对位置
+```python
+while nums[len_nums - rm_num - 1] == val and len_nums - rm_num - 1 > i:
+    rm_num += 1
+```
+
+- 快慢指针，元素相对位置不变
+```python
+while fast < size:  
+    if nums[fast] != val:
+        nums[slow] = nums[fast]
+        slow += 1
+    fast += 1
+```
+
+### 有序数组平方
+- 首尾双指针，先定义列表，然后就可以升降序
+```python
+l, r, i = 0, len(nums)-1, len(nums)-1
+res = [float('inf')] * len(nums) # 需要提前定义列表，存放结果
+```
+
+### 螺旋矩阵
+- 定义矩阵 `matrix = [[0] * n for _ in range(n)]`
+- 先计算要转多少圈 `loop_time = n//2+n%2`
+- 然后每个圈 四次硬for循环就好
 
 
 
