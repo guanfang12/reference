@@ -46,10 +46,28 @@ ls -lR | grep "^d" | wc -l
 git remote add [alias] [url] 
 ```
 
-```sbash
+```bash
 # Change the URL of the git repo
 git remote set-url origin [git_url] 
 ```
+
+### Git Merge
+
+```bash
+# 更新所有远程分支
+git remote update
+
+# 拉取远程仓库到本地新建branch
+git fetch <远程主机名>(origin) <远程分支名>:<本地新分支名>
+
+# 复制当前分支到一个新的分支，并且会切换过去
+git checkout -b 新分支名
+
+# 复制当前分支到一个新的分支，并且会切换过去
+git merge <本地新分支名> 
+```
+然后根据提示解决[问题冲突](https://juejin.cn/post/7004643157279244325)，再之后push即可
+
 
 
 Deep Learning 
