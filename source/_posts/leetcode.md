@@ -114,7 +114,47 @@ res = [float('inf')] * len(nums) # 需要提前定义列表，存放结果
 - 字符串是不可变类型，先变为 List
 - 用 ''.join 输出
 - .split() 可以直接处理若干空格，.strip() 去首尾空
+- [前缀表、KMP待看](https://programmercarl.com/0028.%E5%AE%9E%E7%8E%B0strStr.html)
 
+
+### 堆栈队列
+- 逆波兰表达式求值：除法用 `int(x/y)`
+- 滑动窗口最大值: 维护单调递增队列
+```python
+from collections import deque
+deque.pop() # deque.append() 
+deque.popleft() # deque.appendleft() 
+```
+
+
+
+二叉树
+----
+
+
+### 基本概念
+- 满二叉树：度为0的结点在同一层，，有2^k-1个节点
+- 完全二叉树：次底层满，最底层从左至右没空
+- 二叉搜索树：左子树小于根的值，右子树大于
+- 平衡二叉搜索树（AVL）：左右子树高度差不超过1
+- 数组存二叉树：父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2
+- [遍历方式](https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F)
+
+
+
+
+
+
+跳过未学内容
+----
+
+
+### KMP/前缀表
+- [实现 strStr()](https://programmercarl.com/0028.%E5%AE%9E%E7%8E%B0strStr.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)
+- [重复的子字符串](https://programmercarl.com/0459.%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)
+
+### 大堆顶小堆顶
+- [前 K 个高频元素](https://programmercarl.com/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)
 
 
 
@@ -161,9 +201,21 @@ res = [float('inf')] * len(nums) # 需要提前定义列表，存放结果
 - 社招内推码: K75ZZW7 
 - 投递链接: https://li.jobs.feishu.cn/s/iNC7tvwY
 
+
+### 蚂蚁校招
+投递记录：[蚂蚁](https://hrrecommend.antgroup.com/job-list.html?code=cBrG4rUJjRK7p4enzWJ3%2Fi8ARVk5fLXU9RVJu_UvHsE%3D)
+- 【25届蚂蚁星】算法工程师-计算机视觉
+
+
+### 百度
+- [感知技术组_实习计算机视觉算法研发工程师(自动驾驶方向)(J71299)](https://talent.baidu.com/jobs/detail/INTERN/e6aea163-deab-47dc-bbd2-ad4e67aa16c5?recommendCode=IVV4T1)
+
+
 ### 待开启
 - OPPO
 - 快手
 - 得物
 - 字节
 - 京东
+- 百度
+- 地平线

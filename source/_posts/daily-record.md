@@ -119,3 +119,7 @@ for p in jobs:
     p.join()
 
 ```
+
+
+### Matplotlib
+- `%matplotlib inline`
