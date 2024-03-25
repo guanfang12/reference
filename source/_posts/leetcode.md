@@ -140,7 +140,49 @@ deque.popleft() # deque.appendleft()
 - 数组存二叉树：父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2
 - [遍历方式](https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F)
 
+### 读入二叉树
+```python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
+def deserialize(data):
+    def build_tree(index):
+        if index >= len(data) or data[index] is None:
+            return None
+        root = TreeNode(data[index])
+        root.left = build_tree(2 * index + 1)
+        root.right = build_tree(2 * index + 2)
+        return root
+    
+    return build_tree(0)
+
+def print_tree(root, level=0, prefix="Root: "):
+    if root is not None:
+        print("  " * level + prefix + str(root.val))
+        print_tree(root.left, level + 1, "L -- ")
+        print_tree(root.right, level + 1, "R -- ")
+        
+def inorder_traversal(root):
+    if root:
+        inorder_traversal(root.left)
+        print(root.val, end=' ')
+        inorder_traversal(root.right)
+
+def main():
+    tree_input = [1, 2, 3, None, 4, 5]
+    root = deserialize(tree_input)
+    print("Inorder Traversal of the Binary Tree:")
+    inorder_traversal(root)
+    
+    print_tree(root)
+
+if __name__ == "__main__":
+    main()
+
+```
 
 
 
